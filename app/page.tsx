@@ -16,6 +16,7 @@ import {
   ExternalLink,
   MapPin,
   Calendar,
+  Download,
 } from "lucide-react";
 
 export default function Portfolio() {
@@ -32,10 +33,10 @@ export default function Portfolio() {
             />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
-            Hi, I'm <span className="text-primary">Angelita</span>
+            Hi, I'm <span className="text-primary">Your Name</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-balance">
-            Final Year Software Engineering Student at{" "}
+            Final Year Software Engineering student at{" "}
             <span className="text-card-foreground font-semibold">
               Singapore Management University
             </span>
@@ -45,17 +46,33 @@ export default function Portfolio() {
             meaningful software that makes a difference. Currently exploring
             full-stack development, cybersecurity, and modern web technologies.
           </p>
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg"
-            onClick={() =>
-              document
-                .getElementById("projects")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            View My Work
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg"
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              View My Work
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="flex items-center gap-2 px-8 py-3 text-lg bg-transparent"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/Angelita_Kng_Resume.pdf";
+                link.download = "Angelita_Kng_Resume.pdf";
+                link.click();
+              }}
+            >
+              <Download className="w-5 h-5" />
+              Download Resume
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -69,7 +86,7 @@ export default function Portfolio() {
             Some projects I dabbled on
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-9">
             <Card className="group hover:shadow-lg transition-all duration-300 border-border bg-card">
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -78,30 +95,46 @@ export default function Portfolio() {
                   </CardTitle>
                 </div>
                 <CardDescription>
-                  ELO-based Pokemon tournament system with unique betting
-                  features
+                  Engaging ELO-based Pokémon battle tournament platform
+                  featuring a unique and functional betting system
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary">React</Badge>
-                  <Badge variant="secondary">Node.js</Badge>
+                  <Badge variant="secondary">Next.JS</Badge>
+                  <Badge variant="secondary">Chakra UI</Badge>
+                  <Badge variant="secondary">Express.JS</Badge>
+                  <Badge variant="secondary">Spring Boot</Badge>
                   <Badge variant="secondary">MySQL</Badge>
                   <Badge variant="secondary">Stripe</Badge>
+                  <Badge variant="secondary">AWS</Badge>
                 </div>
                 <div className="flex gap-2">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="flex items-center gap-2 bg-transparent"
+                  <a
+                    href="https://github.com/AngelitaK/pokerivals"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Github className="w-4 h-4" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="flex items-center gap-2">
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex items-center gap-2 bg-transparent"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </Button>
+                  </a>
+
+                  <a
+                    href="https://pokerivals.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button size="sm" className="flex items-center gap-2">
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -114,23 +147,35 @@ export default function Portfolio() {
                   </CardTitle>
                 </div>
                 <CardDescription>
-                  Mashup ticketing platform with real-time updates on concerts in Singapore
+                  A microservices project to simulate a seamless event booking
+                  and ticketing system with real-time updates on concerts in
+                  Singapore
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary">Next.js</Badge>
-                  <Badge variant="secondary">TypeScript</Badge>
+                  <Badge variant="secondary">React.JS</Badge>
+                  <Badge variant="secondary">Express.JS</Badge>
+                  <Badge variant="secondary">Spring Boot</Badge>
+                  <Badge variant="secondary">MySQL</Badge>
+                  <Badge variant="secondary">Docker</Badge>
+                  <Badge variant="secondary">Stripe</Badge>
                 </div>
                 <div className="flex gap-2">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="flex items-center gap-2 bg-transparent"
+                  <a
+                    href="https://github.com/AngelitaK/ticketblaster"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Github className="w-4 h-4" />
-                    Code
-                  </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex items-center gap-2 bg-transparent"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -143,27 +188,45 @@ export default function Portfolio() {
                   </CardTitle>
                 </div>
                 <CardDescription>
-                  E-commerce platform for second hand fashion items
+                  Developed a scalable e-commerce platform for second-hand
+                  fashion, facilitating seamless item uploads for sellers and
+                  easy access for buyers
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary">React.js</Badge>
+                  <Badge variant="secondary">React.JS</Badge>
+                  <Badge variant="secondary">Express.JS</Badge>
+                  <Badge variant="secondary">JavaScript</Badge>
+                  <Badge variant="secondary">Material UI</Badge>
                   <Badge variant="secondary">PostgreSQL</Badge>
                 </div>
                 <div className="flex gap-2">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="flex items-center gap-2 bg-transparent"
+                  <a
+                    href="https://github.com/AngelitaK/revogue"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Github className="w-4 h-4" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="flex items-center gap-2">
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex items-center gap-2 bg-transparent"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </Button>
+                  </a>
+
+                  <a
+                    href="https://revogue.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button size="sm" className="flex items-center gap-2">
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -176,23 +239,33 @@ export default function Portfolio() {
                   </CardTitle>
                 </div>
                 <CardDescription>
-                  To fix this part
+                  A community platform for fashion enthusiasts to share and
+                  discover personal lookbooks by other users
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary">React.js</Badge>
-                  <Badge variant="secondary">PostgreSQL</Badge>
+                  <Badge variant="secondary">Next.JS</Badge>
+                  <Badge variant="secondary">Express.JS</Badge>
+                  <Badge variant="secondary">Tailwind CSS</Badge>
+                  <Badge variant="secondary">JavaScript</Badge>
+                  <Badge variant="secondary">Firebase</Badge>
                 </div>
                 <div className="flex gap-2">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="flex items-center gap-2 bg-transparent"
+                  <a
+                    href="https://github.com/AngelitaK/thesinglets"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Github className="w-4 h-4" />
-                    Code
-                  </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex items-center gap-2 bg-transparent"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -211,8 +284,7 @@ export default function Portfolio() {
           </p>
 
           <div className="space-y-8">
-
-            <Card className="border-border bg-card">
+            <Card className="border-border bg-card hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                   <div>
@@ -236,29 +308,25 @@ export default function Portfolio() {
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-muted-foreground">
+                <ul className="space-y-5 text-muted-foreground">
                   <li>
-                    • Implemented end-to-end solutions by developing backend
-                    services with Java Spring Boot, Apache Kafka, and Docker,
-                    while also building client-facing frontend applications
-                    using AngularJS
+                    • Developed end-to-end solutions, including both Angular
+                    frontends and Java Spring Boot backends with Kafka and
+                    Docker.
                   </li>
                   <li>
-                    • Executed comprehensive code development and component
-                    testing, authoring over 30+ unit test cases with JUnit and
-                    Mockito to ensure strict alignment with functional
-                    specifications
+                    • Executed over 30 unit tests using JUnit and Mockito to
+                    ensure strict alignment with functional specifications
                   </li>
                   <li>
-                    • Contributed to issue analysis and resolution across test
-                    phases and production, demonstrating support for technical
-                    solutions and team collaboration
+                    • Supported issue analysis and resolution in both test and
+                    production environments through team collaboration
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="border-border bg-card">
+            <Card className="border-border bg-card hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                   <div>
@@ -282,30 +350,28 @@ export default function Portfolio() {
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-muted-foreground">
+                <ul className="space-y-5 text-muted-foreground">
                   <li>
-                    • Created over 20 mock ups and design concepts, converting
-                    into fully functional solutions with 100% cross-device
-                    compatibility and responsiveness, adhering to the principles
-                    of the SDLC lifecycle
+                    • Designed over 20 mockups and concepts, converting them
+                    into fully responsive, cross-device functional solutions
+                    following the SDLC
                   </li>
                   <li>
-                    • Conducted over 20-unit tests to ensure robust
-                    functionality of the 2 product line websites developed using
-                    the FERN (Firebase, ExpressJS, ReactJs, NodeJS) stack with
-                    Chakra UI and SendGrid, prior to their successful deployment
-                    on Hostinger
+                    • Authored over 20 unit tests for two product websites built
+                    with the FERN stack (Firebase, ExpressJS, ReactJS, NodeJS),
+                    Chakra UI, and SendGrid, ensuring robust functionality
+                    before deployment
                   </li>
                   <li>
-                    • Facilitated the acquisition of 150 new users viewing the
-                    website within 2 months of implementing site improvements on
-                    the newly deployed platform
+                    • Drove a 150-user increase in site traffic within two
+                    months of implementing site improvements on the newly
+                    deployed platform
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="border-border bg-card">
+            <Card className="border-border bg-card hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                   <div>
@@ -329,25 +395,22 @@ export default function Portfolio() {
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-muted-foreground">
+                <ul className="space-y-5 text-muted-foreground">
                   <li>
-                    • Developed an internal application using ASP.NET and MySQL,
-                    achieving a 15% efficiency enhancement for the department,
-                    involving self-directed learning of the new framework during
-                    development
+                    • Developed an internal application with ASP.NET and MySQL,
+                    improving departmental efficiency by 15% through
+                    self-directed learning of a new framework
                   </li>
                   <li>
-                    • Streamlined the UAT process for a whole system feature,
-                    completing testing two weeks ahead of schedule, a success
-                    supported by the rapid acquisition of skills in this new
-                    development environment while building the application
+                    • Streamlined the UAT process for a full system feature,
+                    completing testing two weeks ahead of schedule by rapidly
+                    acquiring new development environment skills
                   </li>
                   <li>
-                    • Partnered with a team of over 5 members to improve
-                    operational efficiency by implementing streamlined
-                    processes, effectively applying newly learned web
-                    application development knowledge to contribute to team
-                    goalF
+                    • Collaborated in a team of five to improve operational
+                    efficiency by applying newly learned web application
+                    development knowledge to streamline processes and meet team
+                    goals
                   </li>
                 </ul>
               </CardContent>
@@ -366,9 +429,34 @@ export default function Portfolio() {
             Technologies and tools I work with
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-9">
+            <Card className="group hover:shadow-lg transition-all duration-300 border-border bg-card">
+              <CardHeader>
+                <CardTitle className="text-card-foreground text-center">
+                  Languages
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <Badge className="bg-yellow-400 text-gray-900">Java</Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">Python</Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">
+                    JavaScript
+                  </Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">
+                    Spring Boot
+                  </Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">
+                    TypeScript
+                  </Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">PHP</Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">HTML</Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">Ionic</Badge>
+                </div>
+              </CardContent>
+            </Card>
 
-            <Card className="border-border bg-card">
+            <Card className="group hover:shadow-lg transition-all duration-300 border-border bg-card">
               <CardHeader>
                 <CardTitle className="text-card-foreground text-center">
                   Frontend
@@ -377,46 +465,43 @@ export default function Portfolio() {
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center">
                   <Badge className="bg-primary text-primary-foreground">
-                    React
+                    React.JS
                   </Badge>
                   <Badge className="bg-primary text-primary-foreground">
-                    Next.js
+                    Next.JS
                   </Badge>
                   <Badge className="bg-primary text-primary-foreground">
-                    Vue.js
+                    Express.JS
                   </Badge>
                   <Badge className="bg-primary text-primary-foreground">
-                    TypeScript
+                    Angular.JS
                   </Badge>
                   <Badge className="bg-primary text-primary-foreground">
                     Tailwind CSS
                   </Badge>
                   <Badge className="bg-primary text-primary-foreground">
-                    HTML/CSS
+                    Chakra UI
+                  </Badge>
+                  <Badge className="bg-primary text-primary-foreground">
+                    Material UI
+                  </Badge>
+                  <Badge className="bg-primary text-primary-foreground">
+                    Vite
                   </Badge>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border bg-card">
+            <Card className="group hover:shadow-lg transition-all duration-300 border-border bg-card">
               <CardHeader>
                 <CardTitle className="text-card-foreground text-center">
-                  Backend
+                  Database
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center">
                   <Badge className="bg-secondary text-secondary-foreground">
-                    Node.js
-                  </Badge>
-                  <Badge className="bg-secondary text-secondary-foreground">
-                    Python
-                  </Badge>
-                  <Badge className="bg-secondary text-secondary-foreground">
-                    Express
-                  </Badge>
-                  <Badge className="bg-secondary text-secondary-foreground">
-                    FastAPI
+                    Firebase
                   </Badge>
                   <Badge className="bg-secondary text-secondary-foreground">
                     PostgreSQL
@@ -424,11 +509,14 @@ export default function Portfolio() {
                   <Badge className="bg-secondary text-secondary-foreground">
                     MongoDB
                   </Badge>
+                  <Badge className="bg-secondary text-secondary-foreground">
+                    MySQL
+                  </Badge>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border bg-card">
+            <Card className="group hover:shadow-lg transition-all duration-300 border-border bg-card">
               <CardHeader>
                 <CardTitle className="text-card-foreground text-center">
                   Tools & Others
@@ -438,10 +526,15 @@ export default function Portfolio() {
                 <div className="flex flex-wrap gap-2 justify-center">
                   <Badge variant="outline">Git</Badge>
                   <Badge variant="outline">Docker</Badge>
+                  <Badge variant="outline">Apache Kafka</Badge>
                   <Badge variant="outline">AWS</Badge>
+                  <Badge variant="outline">Hostinger</Badge>
+                  <Badge variant="outline">Cloudflare</Badge>
                   <Badge variant="outline">Vercel</Badge>
                   <Badge variant="outline">Figma</Badge>
                   <Badge variant="outline">Linux</Badge>
+                  <Badge variant="outline">WinSCP</Badge>
+                  <Badge variant="outline">JUnit Testing</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -464,33 +557,68 @@ export default function Portfolio() {
             >
               angelitakng.2022@scis.smu.edu.sg
             </a>
-            , or by connecting with me on social media!
+            , or by connecting with me via my socials!
           </p>
 
-          <div className="flex justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
+            {/* Email */}
+            <a href="mailto:angelitakng.2022@scis.smu.edu.sg">
+              <Button
+                variant="outline"
+                size="lg"
+                className="flex items-center gap-2 bg-transparent"
+              >
+                <Mail className="w-5 h-5" />
+                Email
+              </Button>
+            </a>
+
+            {/* GitHub */}
+            <a
+              href="https://github.com/AngelitaK"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                className="flex items-center gap-2 bg-transparent"
+              >
+                <Github className="w-5 h-5" />
+                GitHub
+              </Button>
+            </a>
+
+            {/* Linkedin */}
+            <a
+              href="https://www.linkedin.com/in/angelitakng/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                className="flex items-center gap-2 bg-transparent"
+              >
+                <Linkedin className="w-5 h-5" />
+                LinkedIn
+              </Button>
+            </a>
+
+            {/* Resume */}
             <Button
               variant="outline"
               size="lg"
               className="flex items-center gap-2 bg-transparent"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/Angelita_Kng_Resume.pdf";
+                link.download = "Angelita_Kng_Resume.pdf";
+                link.click();
+              }}
             >
-              <Mail className="w-5 h-5" />
-              Email
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="flex items-center gap-2 bg-transparent"
-            >
-              <Github className="w-5 h-5" />
-              GitHub
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="flex items-center gap-2 bg-transparent"
-            >
-              <Linkedin className="w-5 h-5" />
-              LinkedIn
+              <Download className="w-5 h-5" />
+              Resume
             </Button>
           </div>
         </div>
