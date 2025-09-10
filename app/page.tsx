@@ -33,7 +33,7 @@ export default function Portfolio() {
             />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
-            Hi, I'm <span className="text-primary">Your Name</span>
+            Hi, I'm <span className="text-primary">Angelita</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-balance">
             Final Year Software Engineering student at{" "}
