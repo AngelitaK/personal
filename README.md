@@ -1,5 +1,5 @@
 # My Personal Portfolio
-My personal website made using Next.JS, Tailwind CSS and Radix UI.
+My personal website made using Next.JS, Tailwind CSS, Radix UI, and Lucide.
 
 ## Installation
 Install all dependencies
