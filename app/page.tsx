@@ -18,6 +18,7 @@ import {
   Calendar,
   Download,
 } from "lucide-react";
+import { getAssetPath } from "../utils/path";
 
 export default function Portfolio() {
   return (
@@ -27,7 +28,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <img
-              src="/profile.jpg"
+              src={getAssetPath("/profile.jpg")}
               alt="Profile"
               className="w-64 h-64 rounded-full mx-auto mb-6 object-cover border-4 border-primary/20"
             />
@@ -59,18 +60,18 @@ export default function Portfolio() {
               View My Work
             </Button>
             <Button
-              size="lg"
               variant="outline"
-              className="flex items-center gap-2 px-8 py-3 text-lg bg-transparent"
+              size="lg"
+              className="flex items-center gap-2 bg-transparent"
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "/Angelita_Kng_Resume.pdf";
+                link.href = getAssetPath("/Angelita_Kng_Resume.pdf");
                 link.download = "Angelita_Kng_Resume.pdf";
                 link.click();
               }}
             >
               <Download className="w-5 h-5" />
-              Download Resume
+              Resume
             </Button>
           </div>
         </div>
@@ -612,7 +613,7 @@ export default function Portfolio() {
               className="flex items-center gap-2 bg-transparent"
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "/Angelita_Kng_Resume.pdf";
+                link.href = getAssetPath("/Angelita_Kng_Resume.pdf");
                 link.download = "Angelita_Kng_Resume.pdf";
                 link.click();
               }}

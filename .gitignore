@@ -1,5 +1,5 @@
 /node_modules
 /.next/
 /build
-/public/Angelita_Kng_Resume.pdf
+# /public/Angelita_Kng_Resume.pdf
 .env*
