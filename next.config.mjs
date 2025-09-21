@@ -6,11 +6,16 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    unoptimized: true,
-  },
   output: 'export',
-  trailingSlash: true
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
+  // Only add basePath and assetPrefix for production builds
+  ...(process.env.NODE_ENV === 'production' && {
+    basePath: '/personal',
+    assetPrefix: '/personal/',
+  }),
 }
 
 export default nextConfig

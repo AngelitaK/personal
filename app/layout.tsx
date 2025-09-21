@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import './globals.css'
+import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: "Angelita's Portfolio",
