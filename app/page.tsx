@@ -491,16 +491,10 @@ export default function Portfolio() {
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center">
                   <Badge className="bg-yellow-400 text-gray-900">Java</Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">JavaScript</Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">Spring Boot</Badge>
                   <Badge className="bg-yellow-400 text-gray-900">Python</Badge>
-                  <Badge className="bg-yellow-400 text-gray-900">
-                    JavaScript
-                  </Badge>
-                  <Badge className="bg-yellow-400 text-gray-900">
-                    Spring Boot
-                  </Badge>
-                  <Badge className="bg-yellow-400 text-gray-900">
-                    TypeScript
-                  </Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">TypeScript</Badge>
                   <Badge className="bg-yellow-400 text-gray-900">C++</Badge>
                   <Badge className="bg-yellow-400 text-gray-900">PHP</Badge>
                   <Badge className="bg-yellow-400 text-gray-900">HTML</Badge>
@@ -557,13 +551,16 @@ export default function Portfolio() {
                     Firebase
                   </Badge>
                   <Badge className="bg-secondary text-secondary-foreground">
-                    MSSQL
+                    MS SQL
                   </Badge>
                   <Badge className="bg-secondary text-secondary-foreground">
                     MongoDB
                   </Badge>
                   <Badge className="bg-secondary text-secondary-foreground">
                     MySQL
+                  </Badge>
+                  <Badge className="bg-secondary text-secondary-foreground">
+                    PostgreSQL
                   </Badge>
                   <Badge className="bg-secondary text-secondary-foreground">
                     DBeaver
@@ -583,14 +580,15 @@ export default function Portfolio() {
                   <Badge variant="outline">Git</Badge>
                   <Badge variant="outline">JIRA</Badge>
                   <Badge variant="outline">Docker/Containerization</Badge>
-                  <Badge variant="outline">Apache Kafka</Badge>
-                  <Badge variant="outline">Apache JMeter</Badge>
+                  <Badge variant="outline">Kafka</Badge>
+                  <Badge variant="outline">JMeter</Badge>
                   <Badge variant="outline">Unit Testing</Badge>
                   <Badge variant="outline">AWS</Badge>
                   <Badge variant="outline">Hostinger VPS</Badge>
                   <Badge variant="outline">Figma</Badge>
                   <Badge variant="outline">Linux</Badge>
                   <Badge variant="outline">WinSCP</Badge>
+                  <Badge variant="outline">Nginx</Badge>
                   <Badge variant="outline">Wireshark</Badge>
                   <Badge variant="outline">Scrum/Agile</Badge>
                 </div>
