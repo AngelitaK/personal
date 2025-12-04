@@ -45,7 +45,7 @@ export default function Portfolio() {
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-pretty">
             Passionate about creating innovative solutions and building
             meaningful software that makes a difference. Currently exploring
-            full-stack development, cybersecurity, and modern web technologies.
+            full-stack development, cybersecurity, and DevOps.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -290,7 +290,7 @@ export default function Portfolio() {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                   <div>
                     <CardTitle className="text-card-foreground">
-                      Software Developer Intern
+                      Software Engineer Intern
                     </CardTitle>
                     <CardDescription className="text-lg font-medium text-secondary">
                       IDEMIA
@@ -311,17 +311,21 @@ export default function Portfolio() {
               <CardContent>
                 <ul className="space-y-5 text-muted-foreground">
                   <li>
-                    • Developed end-to-end solutions, including both Angular
-                    frontends and Java Spring Boot backends with Kafka and
-                    Docker.
+                    • Engineered 3 core backend services using Java Spring Boot,
+                    WebSocket, and Apache Kafka to handle high volume real-time
+                    data streaming, reducing deployment time by 30% via Docker
+                    containerization
                   </li>
                   <li>
-                    • Executed over 30 unit tests using JUnit and Mockito to
-                    ensure strict alignment with functional specifications
+                    • Ensured service reliability by authoring 30+ unit tests
+                    (JUnit and Mockito), achieving 90%+ test coverage for all
+                    new features and maintaining strict alignment with security
+                    and functional specifications
                   </li>
                   <li>
-                    • Supported issue analysis and resolution in both test and
-                    production environments through team collaboration
+                    • Contributed to issue analysis and resolution across test
+                    phases and production, demonstrating support for technical
+                    solutions and team collaboration
                   </li>
                 </ul>
               </CardContent>
@@ -353,15 +357,16 @@ export default function Portfolio() {
               <CardContent>
                 <ul className="space-y-5 text-muted-foreground">
                   <li>
-                    • Designed over 20 mockups and concepts, converting them
-                    into fully responsive, cross-device functional solutions
-                    following the SDLC
+                    • Created over 20 mock ups and design concepts, converting
+                    into fully functional solutions with 100% cross-device
+                    compatibility and responsiveness, adhering to the principles
+                    of the SDLC lifecycle
                   </li>
                   <li>
-                    • Authored over 20 unit tests for two product websites built
-                    with the FERN stack (Firebase, ExpressJS, ReactJS, NodeJS),
-                    Chakra UI, and SendGrid, ensuring robust functionality
-                    before deployment
+                    • Conducted over 20-unit tests to ensure robust
+                    functionality of the 2 product line websites developed using
+                    the FERN (Firebase, ExpressJS, ReactJS, NodeJS) stack with
+                    Chakra UI and SendGrid
                   </li>
                   <li>
                     • Drove a 150-user increase in site traffic within two
@@ -398,20 +403,66 @@ export default function Portfolio() {
               <CardContent>
                 <ul className="space-y-5 text-muted-foreground">
                   <li>
-                    • Developed an internal application with ASP.NET and MySQL,
-                    improving departmental efficiency by 15% through
+                    • Developed an internal application with ASP.NET, C#, and
+                    MySQL, improving departmental efficiency by 15% through
                     self-directed learning of a new framework
                   </li>
                   <li>
                     • Streamlined the UAT process for a full system feature,
-                    completing testing two weeks ahead of schedule by rapidly
+                    completing testing 2 weeks ahead of schedule by rapidly
                     acquiring new development environment skills
                   </li>
                   <li>
-                    • Collaborated in a team of five to improve operational
-                    efficiency by applying newly learned web application
-                    development knowledge to streamline processes and meet team
-                    goals
+                    • Collaborated in a team of 5 to improve operational
+                    efficiency by implementing streamlined processes and
+                    development knowledge to contribute to team goal
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card hover:shadow-lg transition-all duration-300">
+              <CardHeader>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                  <div>
+                    <CardTitle className="text-card-foreground">
+                      Mobile Application Developer
+                    </CardTitle>
+                    <CardDescription className="text-lg font-medium text-secondary">
+                      People’s Association
+                    </CardDescription>
+                  </div>
+                  <div className="flex items-center gap-4 text-muted-foreground">
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      <span>Jun 2021 - Sep 2021</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <MapPin className="w-4 h-4" />
+                      <span>Singapore</span>
+                    </div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-5 text-muted-foreground">
+                  <li>
+                    • Led a 4-person team to deliver a new client-facing
+                    solution 2 weeks ahead of the 4-month deadline, resulting in
+                    a 95% client satisfaction rating on initial delivery and
+                    sign-off
+                  </li>
+                  <li>
+                    • Developed a cross-platform mobile application
+                    (Ionic/AngularJS) serving over 50 internal beta testers and
+                    integrated Google Firebase for real time authentication and
+                    data synchronization
+                  </li>
+                  <li>
+                    • Managed stakeholder requirements by conducting weekly
+                    sprint review meetings with 4 key clients, successfully
+                    translating ambiguous business needs into 25 confirmed
+                    functional system requirements
                   </li>
                 </ul>
               </CardContent>
@@ -450,6 +501,7 @@ export default function Portfolio() {
                   <Badge className="bg-yellow-400 text-gray-900">
                     TypeScript
                   </Badge>
+                  <Badge className="bg-yellow-400 text-gray-900">C++</Badge>
                   <Badge className="bg-yellow-400 text-gray-900">PHP</Badge>
                   <Badge className="bg-yellow-400 text-gray-900">HTML</Badge>
                   <Badge className="bg-yellow-400 text-gray-900">Ionic</Badge>
@@ -505,13 +557,16 @@ export default function Portfolio() {
                     Firebase
                   </Badge>
                   <Badge className="bg-secondary text-secondary-foreground">
-                    PostgreSQL
+                    MSSQL
                   </Badge>
                   <Badge className="bg-secondary text-secondary-foreground">
                     MongoDB
                   </Badge>
                   <Badge className="bg-secondary text-secondary-foreground">
                     MySQL
+                  </Badge>
+                  <Badge className="bg-secondary text-secondary-foreground">
+                    DBeaver
                   </Badge>
                 </div>
               </CardContent>
@@ -526,16 +581,18 @@ export default function Portfolio() {
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center">
                   <Badge variant="outline">Git</Badge>
-                  <Badge variant="outline">Docker</Badge>
+                  <Badge variant="outline">JIRA</Badge>
+                  <Badge variant="outline">Docker/Containerization</Badge>
                   <Badge variant="outline">Apache Kafka</Badge>
+                  <Badge variant="outline">Apache JMeter</Badge>
+                  <Badge variant="outline">Unit Testing</Badge>
                   <Badge variant="outline">AWS</Badge>
-                  <Badge variant="outline">Hostinger</Badge>
-                  <Badge variant="outline">Cloudflare</Badge>
-                  <Badge variant="outline">Vercel</Badge>
+                  <Badge variant="outline">Hostinger VPS</Badge>
                   <Badge variant="outline">Figma</Badge>
                   <Badge variant="outline">Linux</Badge>
                   <Badge variant="outline">WinSCP</Badge>
-                  <Badge variant="outline">JUnit Testing</Badge>
+                  <Badge variant="outline">Wireshark</Badge>
+                  <Badge variant="outline">Scrum/Agile</Badge>
                 </div>
               </CardContent>
             </Card>
